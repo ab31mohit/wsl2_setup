@@ -82,11 +82,10 @@ List the gpg keys in long format
 gpg --list-secret-keys --keyid-format=long
 ```
 
-Replace the GPG ID with your own GPG Key ID
+Export and copy the GPG key. Replace the GPG id with your own GPG Key id
 ```
-gpg --armor --export E68713845D8995D7
+gpg --armor --export E68713845D8995D7 | clip.exe
 ```
-Copy your GPG key, beginning with `-----BEGIN PGP PUBLIC KEY BLOCK-----` and ending with `-----END PGP PUBLIC KEY BLOCK-----`.
 
 ### 2. Add GPG key to your Github Account:
 Follow the same instruction as for SSH Key adding, just select `ADD GPG key` and paste the copied GPG key.
