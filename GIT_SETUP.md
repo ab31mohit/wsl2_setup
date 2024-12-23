@@ -30,7 +30,7 @@ cd ~
 ssh-keygen -t ed25519 -C "yourPrimaryGithubEmail"
 ```
 It will prompt you to enter the path where your want to save the ssh key. Just keep pressing `ENTER` to save the file in default location with default passphrase.    
-Your ssh key will be saved at `/home/$USER/.ssh/id_ed25519.pub` file.
+Your ssh key will be saved at `~/.ssh/id_ed25519.pub` file.
 
 ### 4. Add your ssh key to ssh agent:
 Start the ssh-agent in the background
@@ -45,7 +45,7 @@ ssh-add ~/.ssh/id_ed25519
 ### 5. Add SSH Key to your Github:
 Copy the ssh key from here
 ```
-cat /home/$USER/.ssh/id_ed25519.pub | clip.exe
+cat ~/.ssh/id_ed25519.pub | clip.exe
 ```
 Go to your Github `account->Settings->SSH & GPG Keys->Add new ssh key`.   
 Name your SSH Key as you want.    
