@@ -9,6 +9,7 @@ You need an ssh connection between your local machine (the ubuntu system) and re
 ### 1. Install git on your local machine:
 ```
 sudo apt install git
+sudo apt install xclip
 ```
 
 ### 2. Config your global git environment with your github credentials:
@@ -47,6 +48,11 @@ Copy the ssh key from here
 ```
 cat ~/.ssh/id_ed25519.pub | clip.exe
 ```
+OR use this command to copy the output on Ubuntu-22.04 LTS Desktop
+```
+cat ~/.ssh/id_ed25519.pub | xclip -selection clipboard
+```
+
 Go to your Github `account->Settings->SSH & GPG Keys->Add new ssh key`.   
 Name your SSH Key as you want.    
 Paste the contents of in the `key` section. Keep the `Key type` as Authentication Key.
@@ -86,6 +92,10 @@ Export and copy the GPG key. Replace the GPG id with your own GPG Key id
 ```
 gpg --armor --export E68713845D8995D7 | clip.exe
 ```
+OR use this command to copy the output on Ubuntu-22.04 LTS Desktop   
+```
+gpg --armor --export E68713845D8995D7 | xclip -selection clipboard
+```
 
 ### 2. Add GPG key to your Github Account:
 Follow the same instruction as for SSH Key adding, just select `ADD GPG key` and paste the copied GPG key.
@@ -105,6 +115,9 @@ git config --global user.signingkey E68713845D8995D7
 ```
 git config --global commit.gpgsign true
 git config --global tag.gpgSign true
+```
+If you are on Ubuntu-22.04 LTS Desktop, run this command as well
+```
 [ -f ~/.bashrc ] && echo -e '\nexport GPG_TTY=$(tty)' >> ~/.bashrc
 ```
 
