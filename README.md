@@ -1,5 +1,5 @@
-# ROS2 humble in windows using WSL
-This packages aims to provide the step by step processes to install ubuntu 22 and ROS2 humble on windows using wsl2 and also install other basic utilities that are helpful while using wsl2.
+# Setting up WSL2 on Windows 11
+This repository demonstrates how to setup wsl2 (Windows Subsystem of Linux 2) for using Ubuntu-22.04 LTS winthin windows.
 
 ## 1. Pre-requisites :
 - Go to search & type 'Turn windows features on or off' & select the following checkboxes
@@ -39,19 +39,14 @@ sudo apt update && sudo apt upgrade -y
 ```
 sudo apt install gedit
 ```
-- [Setup Git with SSH/GPG keys](GIT_SETUP.md) on your local system
 
-## 2. Install ROS2 Humble from [***<span style="color:green">here</span>***](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html).
-- Do source the ros2 distro in your `.bashrc`
-```
-echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc
-```
+- [Setup Git with SSH/GPG keys](GIT_SETUP.md) on your local system.
 
 
-# Setting up some utilities for wsl
+## 2. Setting up some utilities for wsl
 These utilities are useful to make the wsl work much more like a real Ubuntu distribution.
 
-## 1. Showing current git branch :    
+### a. Showing current git branch :    
 By default the linux terminal doesn't show current git branch in it's prompt. To do this, just add the following line in your `.bashrc` file    
 
 ```
@@ -74,7 +69,7 @@ The output will be something like this
   <img src="media/git_branch.png" alt="Showing current git branch" />
 </div>
 
-## 2. Installing Nautilus package :
+### b. Installing Nautilus package :
 Nautilus is kind of a gui window that allows you to open any specified path/location in a mini file explorer type window. To install it, run the following command   
 ```
 sudo apt install nautilus
@@ -90,7 +85,7 @@ It will look something like this
   <img src="media/nautilus.png" alt="Opening current directory with nautilus" />
 </div>
 
-## 3. Installing Gnome-terminal :
+### c. Installing Gnome-terminal :
 By default the wsl terminals doesn't support gnome features.    
 So in case you use some bash files or python scripts that create multiple gnome tabs, they won't work in default wsl terminals for ubuntu.    
 In that case, you have to explicitly install gnome-terminal & display it on your screen. To do this, use following commands
@@ -117,7 +112,7 @@ So you can just do the following command to navigate to your windows's user dire
 cd $win11
 ``` 
 
-# Removing ubuntu-22.04 & WSL2 completely from windows
+## 3. Removing ubuntu-22.04 & WSL2 completely from windows
 
 - ### check what distros you have in wsl2 & unregister them:
 Open powersheel & type following commands to unregister your installed linux distros
