@@ -1,6 +1,8 @@
 # Setting up WSL2 on Windows 11
 This repository demonstrates how to setup wsl2 (Windows Subsystem of Linux 2) for using Ubuntu-22.04 LTS winthin windows.
 
+![GitHub repo size](https://img.shields.io/github/repo-size/ab31mohit/wsl2_setup)
+
 ## 1. Pre-requisites :
 - Go to search & type 'Turn windows features on or off' & select the following checkboxes
    
